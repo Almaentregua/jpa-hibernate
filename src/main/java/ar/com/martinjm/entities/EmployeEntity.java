@@ -10,10 +10,10 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity(name = "Employe")
-@Table(name = "Empleado")
+@Table(name = "EmployeEntity")
 @Getter
 @Setter
-public class Empleado implements Serializable {
+public class EmployeEntity implements Serializable {
     @Id
     @Column(name = "id")
     private Integer code;
@@ -24,6 +24,6 @@ public class Empleado implements Serializable {
     @Column(name = "apellido")
     private String lastName;
 
-    public Empleado() {
+    public EmployeEntity() {
     }
 }
