@@ -3,18 +3,16 @@ package ar.com.martinjm.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "Employe")
-@Table(name = "EmployeEntity")
+@Table(name = "empleado")
 @Getter
 @Setter
-public class EmployeEntity implements Serializable {
+public class EmployerEntity implements Serializable {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id")
     private Integer code;
 
@@ -24,6 +22,10 @@ public class EmployeEntity implements Serializable {
     @Column(name = "apellido")
     private String lastName;
 
-    public EmployeEntity() {
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_direccion")
+    private DirectionEntity directionEntity;
+
+    public EmployerEntity() {
     }
 }

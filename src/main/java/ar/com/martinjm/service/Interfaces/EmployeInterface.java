@@ -1,9 +1,9 @@
 package ar.com.martinjm.service.Interfaces;
 
-import ar.com.martinjm.entities.EmployeEntity;
+import ar.com.martinjm.entities.EmployerEntity;
 
 import java.util.List;
 
 public interface EmployeInterface {
-    List<EmployeEntity> getAllEmployes();
+    List<EmployerEntity> getAllEmployes();
 }
